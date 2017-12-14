@@ -18,12 +18,12 @@ public class ServletProcessor1 {
 	
 	public void process(Request request,Response  response) {
 		String uri=request.getUri();
-		String servletName=uri.substring(uri.lastIndexOf("/"));
+		String servletName=uri.substring(uri.lastIndexOf("/")+1);
 		URLClassLoader loader=null;
 		try {
 			URL[] urls=new URL[1];
 			URLStreamHandler streamHandler=null;
-			File classPath=new File(HttpServer1.WEB_ROOT);
+			File classPath=new File(this.getClass().getResource("").getPath());
 			String repository=(new URL("file",null,classPath.getCanonicalPath()+File.separator)).toString();
 			urls[0]=new URL(null,repository,streamHandler);
 			loader=new URLClassLoader(urls);

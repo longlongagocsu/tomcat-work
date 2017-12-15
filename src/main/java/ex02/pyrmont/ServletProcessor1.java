@@ -33,7 +33,7 @@ public class ServletProcessor1 {
 		}
 		Class myClass=null;
 		try {
-			myClass=loader.loadClass(servletName);
+			myClass=loader.loadClass("ex02.pyrmont."+servletName);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

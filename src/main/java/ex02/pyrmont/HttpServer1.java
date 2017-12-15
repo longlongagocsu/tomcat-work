@@ -8,8 +8,6 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import ex02.pyrmont.Request;
-import ex02.pyrmont.Response;
 
 /**
 * @author 董龙君
@@ -25,7 +23,7 @@ public class HttpServer1 {
 	
 	private boolean shutdown=false;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		HttpServer1 server=new HttpServer1();
 		server.await();
 	}

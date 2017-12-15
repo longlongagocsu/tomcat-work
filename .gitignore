@@ -1,0 +1,8 @@
+/target/
+/.settings/
+.classpath
+.project
+.idea/
+*.iml
+APP_HOME_IS_UNDEFINED/
+.DS_Store
